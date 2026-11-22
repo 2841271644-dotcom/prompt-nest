@@ -1,0 +1,119 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8f3"><title>Prompt Nest · 提示词与素材收藏</title><meta name="description" content="A home for your prompts, images, and videos."><style>
+*{box-sizing:border-box} :root{--paper:#f8f9f5;--ink:#17251d;--muted:#657065;--line:#d9dfd5;--lime:#deff80;font-family:"Instrument Sans",Inter,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--paper)}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer;color:inherit}button:disabled{opacity:.46;cursor:default}[hidden]{display:none!important}:focus-visible{outline:3px solid #74933b;outline-offset:3px}button{border:0;background:none}.wrap{width:min(1280px,92%);margin:auto}header{border-bottom:1px solid var(--line)}header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between}.brand,.row,.actions{display:flex;align-items:center;gap:12px}.brand strong{font-size:23px;letter-spacing:.12em}.brand small,.mono,.kicker{font:600 12px/1.4 "IBM Plex Mono",monospace;letter-spacing:.12em}.brand small{border-left:1px solid #acb6aa;padding-left:12px;letter-spacing:.07em}.logo{width:34px;height:34px;background:var(--ink);display:grid;place-items:center;border-radius:8px}.logo i{width:18px;height:14px;border:2px solid var(--lime);transform:skewY(-16deg);box-shadow:3px 3px var(--ink),4px 5px var(--lime)}.status{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}.status i{display:block;width:8px;height:8px;border-radius:50%;background:#7b9a42}
+.auth{margin:clamp(28px,5vh,70px) auto;display:grid;grid-template-columns:1.15fr .85fr;min-height:650px;background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden}.studio{position:relative;isolation:isolate;overflow:hidden;background:#dae6cc;color:#182e23;padding:clamp(26px,3.5vw,54px);display:flex;flex-direction:column;justify-content:space-between;min-height:620px}.studio:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#334d2512 1px,transparent 1px),linear-gradient(90deg,#334d2512 1px,transparent 1px);background-size:36px 36px;z-index:-2}.kicker{display:flex;align-items:center;gap:10px}.kicker:before{content:"";background:currentColor;width:24px;height:2px}.studio h1{font-size:clamp(42px,5vw,74px);letter-spacing:-.065em;line-height:1.11;margin:20px 0 0;font-weight:800}.studio h1 span{display:block}.art{position:relative;width:78%;height:260px;margin:35px auto 22px;isolation:isolate}.print{position:absolute;left:10%;top:7%;width:77%;height:89%;border-radius:6px;box-shadow:0 14px 20px #182d2726;border:1px solid #21392b5c}.back{background:repeating-linear-gradient(150deg,#adc5a5 0 5px,#dbe9cc 5px 9px);transform:translate(14%,-7%) rotate(13deg)}.middle{background:#25483a;transform:translate(2%,-6%) rotate(2deg)}.front{background:#f5efdb;padding:10px;transform:translate(-8%,2%) rotate(-9deg);display:flex;flex-direction:column;gap:8px}.land{position:relative;overflow:hidden;flex:1;background:linear-gradient(140deg,#e9edc7,#e0e7bb)}.sun{position:absolute;width:22%;aspect-ratio:1;border-radius:100%;background:#fa713f;top:11%;right:25%}.hill{position:absolute;bottom:-47%;left:-17%;background:#90a677;border-radius:48% 55% 0 0;width:120%;height:107%;transform:rotate(19deg)}.hill.b{background:#4e765e;bottom:-48%;left:8%;transform:rotate(-25deg)}.hill.c{background:#23493c;bottom:-75%;left:-24%;transform:rotate(20deg)}.land:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#112c2738 .7px,transparent .8px);background-size:3px 3px;mix-blend-mode:multiply;opacity:.6}.printfoot,.studiofoot{display:flex;justify-content:space-between;align-items:center}.printfoot{font:700 10px monospace;letter-spacing:.16em}.bars{width:34px;height:10px;background:repeating-linear-gradient(90deg,#25392c 0 1px,transparent 1px 3px,#25392c 3px 6px,transparent 6px 8px)}.studiofoot{border-top:1px solid #94a78c;padding-top:17px;font-size:14px}.studiofoot b{font:600 12px monospace;letter-spacing:.08em}.authbox{align-self:center;width:min(370px,80%);margin:40px auto}.tabs{display:flex;gap:3px;padding:4px;border:1px solid var(--line);border-radius:10px;background:#f2f4ef}.tabs button{flex:1;border-radius:6px;padding:9px;font-weight:600;font-size:14px;color:#677264}.tabs [aria-selected=true]{background:white;box-shadow:0 1px 4px #23381c20;color:var(--ink)}h2{font-size:34px;letter-spacing:-.055em;margin:38px 0 9px}.sub{color:var(--muted);font-size:15px;line-height:1.65;margin:0 0 25px}.field{display:grid;gap:8px;margin:0 0 18px;font-weight:600;font-size:14px}.field input,.field textarea,.search{width:100%;border:1px solid #cbd3c8;border-radius:8px;padding:13px 14px;background:#fff;color:var(--ink);font-weight:400;line-height:1.45}.field input::placeholder,.field textarea::placeholder{color:#868e83}.pass{position:relative}.pass input{padding-right:64px}.pass button{position:absolute;right:6px;top:5px;height:38px;color:#52634c;font-size:13px}.primary,.secondary,.danger{padding:11px 17px;border-radius:8px;font-weight:650;font-size:14px}.primary{background:#253c2d;color:white}.primary:hover{background:#37583e}.secondary,.danger{background:white;border:1px solid var(--line)}.danger{color:#a04436}.authbox .primary{width:100%;margin-top:3px;background:var(--lime);border:1px solid #bbd16b;color:var(--ink);padding:14px}.message{font-size:14px;line-height:1.55;color:#a03d2d;margin:12px 0 0}.note{font-size:13px;color:#73806f;margin-top:16px}
+.workspace{padding:40px 0 75px}.workhead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px}.workhead h1{font-size:clamp(35px,4.5vw,61px);letter-spacing:-.07em;margin:14px 0 6px}.toolbar{display:flex;align-items:center;gap:12px;justify-content:space-between;border-block:1px solid var(--line);padding:16px 0;margin:26px 0 20px}.filters{display:flex;gap:6px;flex-wrap:wrap}.filters button{padding:7px 12px;border-radius:99px;font-size:14px}.filters [aria-pressed=true]{background:var(--ink);color:white}.search{max-width:350px;padding:10px 14px}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}.card{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden;padding:0;display:flex;flex-direction:column}.thumb{position:relative;width:100%;height:177px;display:grid;place-items:center;overflow:hidden;background:#dce6d4;padding:0}.thumb img,.thumb video{width:100%;height:100%;object-fit:cover}.thumb .txt{font:italic 58px Georgia,serif;color:#617a62}.kind{position:absolute;left:11px;top:11px;font:600 11px monospace;background:#fffdf4ed;padding:5px 8px;border-radius:4px}.cardbody{padding:16px}.card h3{margin:0 0 7px;font-size:19px;overflow-wrap:anywhere}.snippet{color:var(--muted);height:42px;font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.tag{font-size:12px;background:#eef3e8;padding:4px 8px;border-radius:4px;overflow-wrap:anywhere;max-width:100%}.cardactions{display:flex;gap:14px;border-top:1px solid var(--line);padding-top:11px}.cardactions button{padding:2px 0;font-size:13px}.empty{text-align:center;border:1px dashed #bfcbbb;border-radius:14px;padding:60px 16px}.empty h3{margin:0 0 9px}.empty p{color:var(--muted)}dialog{border:1px solid var(--line);color:var(--ink);border-radius:15px;padding:0;width:min(580px,94vw);max-height:90dvh;box-shadow:0 24px 90px #152d2330}dialog::backdrop{background:#14251ec0}dialog form,.detail{padding:24px}.modalhead{display:flex;align-items:center;justify-content:space-between;margin:0 0 19px}.modalhead h2{margin:0;font-size:25px}.close{background:#eef1eb;border-radius:50%;width:32px;height:32px;font-size:20px}.field textarea{resize:vertical;min-height:105px}.modalfoot{display:flex;justify-content:flex-end;gap:10px}.media{display:block;max-width:100%;max-height:55vh;margin:8px auto;object-fit:contain}.fullprompt{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}.detail h3{font-size:15px;margin:22px 0 5px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:9px;z-index:5;max-width:90vw}
+@media(max-width:760px){.auth{grid-template-columns:1fr;margin:18px auto}.studio{min-height:212px;padding:25px;justify-content:flex-start}.studio h1{font-size:38px;margin-top:14px}.art{position:absolute;right:2%;top:25%;height:130px;width:40%;margin:0}.studiofoot{margin-top:20px;padding-top:9px;font-size:12px}.studiofoot b{display:none}.authbox{width:88%;margin:24px auto 34px}.authbox h2{margin-top:23px}.workhead,.toolbar{align-items:stretch;flex-direction:column}.search{max-width:none}.workspace{padding:27px 0}.brand small{display:none}header .wrap{height:60px}.status{font-size:13px}.workhead .actions{flex-wrap:wrap}.toolbar{gap:15px}.cards{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}@media(max-width:390px){.art{opacity:.85;right:-6%;width:40%}.studio h1{font-size:32px}}
+.card-download,.download{color:inherit;text-decoration:none}.card-download{font-size:14px;padding:2px 0;color:#356144}.card-download:hover,.download:hover{text-decoration:underline}.download{display:inline-flex;align-items:center}.cardactions,.modalfoot{flex-wrap:wrap}</style></head><body><header><div class="wrap"><div class="brand"><span class="logo" aria-hidden="true"><i></i></span><strong>Prompt Nest</strong></div><div class="row"><span class="status"><i></i><span id="account">本浏览器收藏</span></span></div></div></header>
+<main id="work" class="wrap workspace"><div class="workhead"><div><div class="kicker">PERSONAL COLLECTION</div><h1>我的收藏室</h1><span id="count" class="sub"></span></div><div class="actions"><button class="secondary" id="undo" disabled>撤回上一步</button><button class="primary" id="newItem" disabled>＋ 新建收藏</button></div></div><div class="toolbar"><div id="filters" class="filters"></div><input id="search" class="search" type="search" placeholder="搜索名称、关键词或提示词" aria-label="搜索收藏"></div><div class="cards" id="cards"></div><div id="empty" class="empty" hidden><h3 id="emptyTitle"></h3><p id="emptyText"></p><button class="secondary" id="emptyAction"></button></div><div id="workError" class="message" role="alert"></div></main>
+<dialog id="editor"><form id="editForm"><div class="modalhead"><h2 id="editTitle">新建收藏</h2><button type="button" class="close" aria-label="关闭">×</button></div><label class="field">收藏名称<input id="titleInput" required maxlength="120" placeholder="例如：黄金王冠材质研究"></label><label class="field">关键词<input id="tagsInput" placeholder="例如：黄金，王冠，镜面抛光"></label><label class="field">提示词<textarea id="promptInput" placeholder="写下画面描述、材质或镜头提示词…"></textarea></label><label class="field"><span id="fileLabel">添加图片或 MP4（可选，最大 25 MB）</span><input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp,image/gif,video/mp4"></label><div id="draftMedia"></div><div class="modalfoot"><button class="secondary cancel" type="button">取消</button><button id="save" class="primary">保存收藏</button></div><p class="message" id="editError" role="alert"></p></form></dialog>
+<dialog id="viewer"><div class="detail"><div class="modalhead"><h2 id="detailName"></h2><button class="close" aria-label="关闭">×</button></div><div id="detailMedia"></div><div id="detailTags" class="tags"></div><h3>提示词</h3><p id="detailPrompt" class="fullprompt"></p><div class="modalfoot"><span id="detailDownload" hidden></span><button id="copy" class="secondary">复制提示词</button><button id="detailEdit" class="primary">编辑收藏</button></div></div></dialog><div id="toast" class="toast" role="status" hidden></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const make=(name,cls,value)=>{const el=document.createElement(name);if(cls)el.className=cls;if(value!==undefined)el.textContent=value;return el};
+let items=[], type='全部', editId=null, viewed=null, draftUrl='', toastTimer, saving=false;
+function notice(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,3200)}
+let storageReady;
+function collectionDB() {
+  if (!storageReady) storageReady = new Promise((resolve,reject)=>{
+    const request = indexedDB.open('sucang-collection',1);
+    request.onupgradeneeded = ()=>{
+      request.result.createObjectStore('items',{keyPath:'id'});
+      request.result.createObjectStore('history');
+    };
+    request.onsuccess = ()=>resolve(request.result);
+    request.onerror = ()=>reject(request.error);
+  });
+  return storageReady;
+}
+async function localCollection(path,method,form) {
+  const db = await collectionDB();
+  return new Promise((resolve,reject)=>{
+    const read = method === 'GET';
+    const tx = db.transaction(['items','history'],read?'readonly':'readwrite');
+    const records = tx.objectStore('items'), history = tx.objectStore('history');
+    let output = {}, failure;
+    tx.oncomplete = ()=>resolve(output);
+    tx.onabort = ()=>reject(failure || Error('保存失败，请检查浏览器剩余空间和存储权限。'));
+    if (read) {
+      records.getAll().onsuccess = e=>{output.items=e.target.result.sort((a,b)=>b.modified-a.modified)};
+      history.count().onsuccess = e=>{output.canUndo=e.target.result>0};
+      return;
+    }
+    if (path==='undo') {
+      history.get('last').onsuccess = e=>{
+        const last=e.target.result;
+        if (!last) {failure=Error('没有可撤回的操作');tx.abort();return}
+        if(last.before) records.put(last.before); else records.delete(last.id);
+        history.delete('last');
+      };
+      return;
+    }
+    const creating=method==='POST';
+    const id=creating?Array.from(crypto.getRandomValues(new Uint32Array(4)),v=>v.toString(16).padStart(8,'0')).join(''):path.split('/')[1];
+    records.get(id).onsuccess = e=>{
+      const before=e.target.result;
+      if(!creating&&!before){failure=Error('这条收藏已删除，请刷新');tx.abort();return}
+      if(method==='DELETE') records.delete(id);
+      else {
+        const title=form.get('title').trim();
+        if(!title){failure=Error('请输入收藏名称');tx.abort();return}
+        const file=form.get('file')||before?.file||null;
+        records.put({id,title,prompt:form.get('prompt'),tags:form.get('tags'),file,media:!!file,mime:file?.type||'',modified:Date.now()});
+      }
+      history.put({id,before},'last');
+    };
+  });
+}
+let existingSession=false;
+async function api(path,method='GET',body){
+  if(!existingSession)return localCollection(path,method,body);
+  const response=await fetch('/api/'+path,{method,body,credentials:'same-origin'});
+  const data=await response.json();
+  if(!response.ok)throw Error(data.error||'请求失败');
+  return data;
+}
+let mediaUrls=new WeakMap();
+function fileURL(file){
+  if(!mediaUrls.has(file))mediaUrls.set(file,URL.createObjectURL(file));
+  return mediaUrls.get(file);
+}
+async function startCollection(){
+  if(location.protocol!=='file:'){
+    try{
+      const response=await fetch('/api/me',{signal:AbortSignal.timeout(2200)});
+      if(response.ok){
+        const user=await response.json();
+        if(user.name){existingSession=true;$('account').textContent=user.name}
+      }
+    }catch{}
+  }
+  await refresh();
+  $('newItem').disabled=false;
+}
+const kind=item=>!item.media?'提示词':item.mime?.startsWith('video/')?'视频':'图片';
+function media(item,controls=false,src){const video=kind(item)==='视频';const el=make(video?'video':'img',controls?'media':'');if(video){el.controls=controls;el.playsInline=true;el.preload='metadata';el.muted=!controls}else{el.alt=item.title;el.loading='lazy'}el.src=src||(item.file?fileURL(item.file):'/api/media/'+encodeURIComponent(item.id));return el}
+function downloadLink(item, className) {
+  const extensions = {'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif','video/mp4':'mp4'};
+  const mime = item.mime || item.file?.type || '';
+  const extension = extensions[mime] || item.file?.name?.match(/\.([a-z0-9]{1,8})$/i)?.[1] || 'bin';
+  const name = item.title.replace(/[<>:"/\\|?*\x00-\x1f]/g, '_').trim().replace(/[. ]+$/, '') || '素材';
+  const link = make('a', className, mime.startsWith('video/') ? '下载视频' : '下载原图');
+  link.download = name.toLowerCase().endsWith('.'+extension.toLowerCase()) ? name : name+'.'+extension;
+  link.href = item.file ? fileURL(item.file) : '/api/media/'+encodeURIComponent(item.id);
+  return link;
+}
+function tagList(str){return String(str||'').split(/[,，、;；\n]+/).map(s=>s.trim()).filter(Boolean)}
+function showTags(dest,str,clickable=false){dest.replaceChildren();for(const word of tagList(str)){const el=make(clickable?'button':'span','tag',word);if(clickable)el.onclick=()=>{$('search').value=word;render()};dest.append(el)}}
+function action(name,fn,cls){const b=make('button',cls,name);b.type='button';b.onclick=fn;return b}
+function render(){const q=$('search').value.trim().toLowerCase();const list=items.filter(i=>(type==='全部'||kind(i)===type)&&[i.title,i.tags,i.prompt].some(v=>String(v||'').toLowerCase().includes(q)));$('count').textContent='共 '+items.length+' 条收藏';$('filters').replaceChildren();for(const f of ['全部','图片','视频','提示词']){const b=action(f,()=>{type=f;render()});b.setAttribute('aria-pressed',type===f);$('filters').append(b)}$('cards').replaceChildren();for(const item of list){const card=make('article','card'),thumb=action('',()=>view(item),'thumb');thumb.setAttribute('aria-label','预览 '+item.title);thumb.append(item.media?media(item):make('span','txt','Aa'),make('span','kind',kind(item)==='视频'?'▶ MP4':kind(item)==='图片'?'IMAGE':'PROMPT'));const body=make('div','cardbody'),tags=make('div','tags'),actions=make('div','cardactions');showTags(tags,item.tags,true);if(item.media)actions.append(downloadLink(item,'card-download'));actions.append(action('编辑 / 重命名',()=>edit(item)),action('删除',()=>remove(item)));body.append(make('h3','',item.title),make('div','snippet',item.prompt||'暂无提示词'),tags,actions);card.append(thumb,body);$('cards').append(card)}$('empty').hidden=!!list.length;const empty=!items.length;$('emptyTitle').textContent=empty?'收藏室还是空的':'没有找到匹配的收藏';$('emptyText').textContent=empty?'把常用提示词和参考素材保存在一起。':'试试其他关键词，或清除筛选。';$('emptyAction').textContent=empty?'新建第一条收藏':'清除筛选';$('emptyAction').onclick=()=>{if(empty)return edit();$('search').value='';type='全部';render()}}
+async function refresh(){try{const data=await api('items');const prior=items;items=data.items;for(const row of prior){if(row.file&&mediaUrls.has(row.file)){URL.revokeObjectURL(mediaUrls.get(row.file));mediaUrls.delete(row.file)}}$('undo').disabled=!data.canUndo;$('workError').textContent='';render()}catch(e){$('workError').textContent=e.message}}
+function edit(item){editId=item?.id??null;$('editTitle').textContent=item?'编辑收藏':'新建收藏';$('editForm').reset();$('titleInput').value=item?.title||'';$('tagsInput').value=item?.tags||'';$('promptInput').value=item?.prompt||'';$('fileLabel').textContent=item?.media?'替换素材（可选，最大 25 MB）':'添加图片或 MP4（可选，最大 25 MB）';$('draftMedia').replaceChildren();if(item?.media)$('draftMedia').append(media(item,true));$('editError').textContent='';$('editor').showModal();$('titleInput').focus()}
+$('fileInput').onchange=()=>{if(draftUrl)URL.revokeObjectURL(draftUrl);const f=$('fileInput').files[0];$('draftMedia').replaceChildren();if(f&&f.size>25*1024*1024){$('editError').textContent='单个素材最多 25 MB';$('fileInput').value='';return}$('editError').textContent='';if(f){draftUrl=URL.createObjectURL(f);$('draftMedia').append(media({media:true,mime:f.type,title:f.name},true,draftUrl));if(!$('titleInput').value.trim())$('titleInput').value=f.name.replace(/\.[^.]+$/,'')}};$('editor').onclose=()=>{$('draftMedia').replaceChildren();if(draftUrl)URL.revokeObjectURL(draftUrl);draftUrl=''};
+$('editForm').onsubmit=async e=>{e.preventDefault();if(saving)return;saving=true;$('save').disabled=true;try{const data=new FormData();data.set('title',$('titleInput').value.trim());data.set('prompt',$('promptInput').value);data.set('tags',$('tagsInput').value);if($('fileInput').files[0])data.set('file',$('fileInput').files[0]);await api(editId===null?'items':'items/'+encodeURIComponent(editId),editId===null?'POST':'PUT',data);$('editor').close();await refresh();notice('收藏已保存')}catch(err){$('editError').textContent=err.message}finally{saving=false;$('save').disabled=false}};
+async function remove(item){try{await api('items/'+encodeURIComponent(item.id),'DELETE');await refresh();notice('已删除，可撤回上一步')}catch(e){notice(e.message)}}
+$('undo').onclick=async()=>{$('undo').disabled=true;try{await api('undo','POST');notice('已撤回上一步')}catch(e){notice(e.message)}await refresh()};$('newItem').onclick=()=>edit();$('search').oninput=render;
+function view(item){viewed=item;const download=$('detailDownload');download.replaceChildren();download.hidden=!item.media;if(item.media)download.append(downloadLink(item,'secondary download'));$('detailName').textContent=item.title;$('detailMedia').replaceChildren();if(item.media)$('detailMedia').append(media(item,true));showTags($('detailTags'),item.tags);$('detailPrompt').textContent=item.prompt||'暂无提示词';$('copy').disabled=!item.prompt;$('viewer').showModal()}
+$('viewer').onclose=()=>{$('detailMedia').replaceChildren()};$('detailEdit').onclick=()=>{$('viewer').close();edit(viewed)};$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(viewed.prompt);$('copy').textContent='已复制';setTimeout(()=>$('copy').textContent='复制提示词',1500)}catch{$('detailPrompt').focus();const range=document.createRange();range.selectNodeContents($('detailPrompt'));getSelection().removeAllRanges();getSelection().addRange(range);$('copy').textContent='请复制选中文字';setTimeout(()=>$('copy').textContent='复制提示词',2000)}};
+for(const b of document.querySelectorAll('.close,.cancel'))b.onclick=()=>b.closest('dialog').close();startCollection();
+</script></body></html>
