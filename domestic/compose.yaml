@@ -1,0 +1,15 @@
+services:
+  sucang:
+    build:
+      context: ..
+      dockerfile: domestic/Dockerfile
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      COOKIE_SECURE: ${COOKIE_SECURE:-1}
+      TRUST_PROXY_IP: ${TRUST_PROXY_IP:-0}
+    volumes:
+      - sucang-data:/var/lib/sucang
+    restart: unless-stopped
+volumes:
+  sucang-data:
